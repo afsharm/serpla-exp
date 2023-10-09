@@ -16,10 +16,5 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: Publish code
-        run: |
-          # Your publishing command, e.g., for GitHub Pages
-          yarn run publish
-
       - name: Run tests
         run: yarn run test
