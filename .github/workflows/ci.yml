@@ -1,0 +1,25 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Publish code
+        run: |
+          # Your publishing command, e.g., for GitHub Pages
+          yarn run publish
+
+      - name: Run tests
+        run: yarn run test
