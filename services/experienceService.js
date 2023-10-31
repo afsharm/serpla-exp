@@ -1,11 +1,6 @@
 const Experience = require('../models/Experience');
 
 class ExperienceService {
-  async createExperience(experienceData) {
-    const newExperience = new Experience(experienceData);
-    return await newExperience.save();
-  }
-
   async getExperienceById(id) {
     return await Experience.findById(id);
   }
