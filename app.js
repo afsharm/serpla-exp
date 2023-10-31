@@ -3,6 +3,9 @@
 const express = require('express');
 const indexRoutes = require('./routes/index');
 const experienceRoutes = require('./routes/experience');
+const { connectToDatabase } = require('./db');
+
+connectToDatabase();
 
 const app = express();
 

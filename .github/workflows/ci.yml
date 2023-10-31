@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+env:
+  MONGODB_CONNECTION: ${{ secrets.MONGODB_CONNECTION_STRING }}
+  MONGODB_TEST_CONNECTION: ${{ secrets.MONGODB_TEST_CONNECTION_STRING }}
+
 jobs:
   build-and-test:
     runs-on: ubuntu-latest

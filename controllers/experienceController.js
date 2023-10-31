@@ -1,8 +1,13 @@
 // Controller logic for experience-related routes
 
-exports.getAllExperiences = (req, res) => {
+const ExperienceService = require('../services/experienceService');
+const getAllExperiences = require('../services/getAllExperiences');
+
+exports.getAllExperiences = async (req, res) => {
     // Logic to fetch all experiences
-    res.send('Get all experiences');
+
+    const allExperiences = await getAllExperiences()
+    return res.json(allExperiences);
 };
 
 exports.getExperienceById = (req, res) => {
